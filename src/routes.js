@@ -240,6 +240,11 @@ const Widgets = Loadable({
   loading: Loading,
 });
 
+const List = Loadable({
+  loader: () => import('./views/Garages/List'),
+  loading: Loading,
+});
+
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   { path: '/', name: 'Home', component: DefaultLayout, exact: true },
@@ -300,7 +305,8 @@ const routes = [
   { path: '/apps/email/message', name: 'Message', component: Message },
   { path: '/apps/invoicing', name: 'Invoice', component: Invoice, exact: true },
   { path: '/apps/invoicing/invoice', name: 'Invoice', component: Invoice },
-  { path: '/widgets', name: 'Widgets', component: Widgets }
+  { path: '/widgets', name: 'Widgets', component: Widgets },
+  { path: '/garages', name: 'GarageList', component: List },
 ];
 
 export default routes;
